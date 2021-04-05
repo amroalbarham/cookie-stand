@@ -26,13 +26,13 @@ let Seattle = {
 
 
   render: function () {
-    let container=document.getElementById('content-area');
-    let h2 =document.createElement('h2');
-    container.appendChild(h2);
-    h2.textContent='Seattle';
-    container.appendChild(h2);
+ 
 
     let parent = document.getElementById('parent');  
+    let nameOflocation=document.createElement('h3');
+    parent.appendChild(nameOflocation);
+    nameOflocation.textContent=this.goodname;
+    
     let unelemnt = document.createElement('ul');
     parent.appendChild(unelemnt);
     console.log(parent);
@@ -40,10 +40,6 @@ let Seattle = {
 
 
 
-    // let pelement =document.getElementById('nameOflocaion1');
-    // let para=document.createElement('p')
-    // pelement.textContent='asdf'
-    // // p.textContent='Seattle';
 
     for (let j = 0; j<timeOfcookie.length; j++) {
 
@@ -84,21 +80,16 @@ let Tokyo = {
 
     
   render: function () {
-    let container=document.getElementById('content-area');
-    let h2 =document.createElement('h2');
-    container.appendChild(h2);
-    h2.textContent='Tokyo';
-    container.appendChild(h2);
+
     let parent = document.getElementById('parent');  
+    let nameOflocation=document.createElement('h3');
+    parent.appendChild(nameOflocation);
+    nameOflocation.textContent=this.goodname;
     let unelemnt = document.createElement('ul');
     parent.appendChild(unelemnt);
     console.log(parent);
     let sum =0;
 
-    // let pelement =document.getElementById('nameOflocaion2');
-    // let para =document.createElement('p');
-    // pelement.textContent='adfsasd'
-    // // nameOflocaion2.textContent= 'Tokyo';
 
 
    
@@ -143,12 +134,11 @@ let Dubai = {
 
 
   render: function () {
-    let container=document.getElementById('content-area');
-    let h2 =document.createElement('h2');
-    container.appendChild(h2);
-    h2.textContent='Dubai';
-    container.appendChild(h2);
+    
     let parent = document.getElementById('parent');  
+    let nameOflocation=document.createElement('h3');
+    parent.appendChild(nameOflocation);
+    nameOflocation.textContent=this.goodname;
     let unelemnt = document.createElement('ul');
     parent.appendChild(unelemnt);
     console.log(parent);
@@ -195,12 +185,11 @@ let Paris = {
 
 
   render: function () {
-    let container=document.getElementById('content-area');
-    let h2 =document.createElement('h2');
-    container.appendChild(h2);
-    h2.textContent='Paris';
-    container.appendChild(h2);
+   
     let parent = document.getElementById('parent');  
+    let nameOflocation=document.createElement('h3');
+    parent.appendChild(nameOflocation);
+    nameOflocation.textContent=this.goodname;
     let unelemnt = document.createElement('ul');
     parent.appendChild(unelemnt);
     console.log(parent);
@@ -246,12 +235,11 @@ let Lima = {
 
 
   render: function () {
-    let container=document.getElementById('content-area');
-    let h2 =document.createElement('h2');
-    container.appendChild(h2);
-    h2.textContent='Lima';
-    container.appendChild(h2);
+    
     let parent = document.getElementById('parent');  
+    let nameOflocation=document.createElement('h3');
+    parent.appendChild(nameOflocation);
+    nameOflocation.textContent=this.goodname;
     let unelemnt = document.createElement('ul');
     parent.appendChild(unelemnt);
     console.log(parent);
