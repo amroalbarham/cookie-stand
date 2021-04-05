@@ -265,4 +265,4 @@ let Lima = {
 Lima.gitCoustmer();
 console.log(Lima.randomNumber1);
 Lima.render();
-console.log(Lima.randomNumber1);
+
