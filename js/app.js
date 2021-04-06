@@ -27,7 +27,7 @@ function showTable() {
   tableelemnts.appendChild(thelastHeading);
   thelastHeading.textContent = 'Daily Location Total';
 
-
+//heloo
 }
 showTable();
 
@@ -57,7 +57,7 @@ Location.prototype.gitrandomNumber = function () {
 
 // console.log(Seattle);
 
-let sumone=0;
+// let sumone=0;
 
 Location.prototype.render = function () {
 
@@ -77,7 +77,7 @@ Location.prototype.render = function () {
     tdelemnts.textContent = this.randomNumber1[i];
     sum += this.randomNumber1[i];
   }
-  sumone+=sum; 
+  // sumone+=sum; 
  
  
   let last = document.createElement('td');
@@ -100,32 +100,32 @@ let totalone=0;
 let total=0;
 let trelemnts=document.createElement('tr');
 tableelemnts.appendChild(trelemnts);
-let tdelemnts=document.createElement('td');
-trelemnts.appendChild(tdelemnts);
-tdelemnts.textContent='Totals'; 
+let thelemnts=document.createElement('th');
+trelemnts.appendChild(thelemnts);
+thelemnts.textContent='Totals'; 
 
 for(let f=0;f<timeOfcookie.length;f++){
       for(let m=0;m<locations.length;m++){
         total+=locations[m].randomNumber1[f];
+        totalone+=locations[m].randomNumber1[f];
       
         
       }
       console.log(total);
-      let tdelemnts=document.createElement('td');
+      let tdelemnts=document.createElement('th');
       trelemnts.appendChild(tdelemnts);
       tdelemnts.textContent=total;
-      totalone+=total;  
+      // totalone+=total;  
       total=0;
 
 
 }
-console.log(sumone);
+// console.log(sumone);
 console.log(totalone);
-let TotalTotal=sumone+totalone;
-console.log(TotalTotal);
-let lastLast=document.createElement('td');
+
+let lastLast=document.createElement('th');
 trelemnts.appendChild(lastLast);
-lastLast.textContent=TotalTotal;
+lastLast.textContent=totalone;
 
 // let finalSumrow=0;
 // for(let r=0;r<sumone.length;r++){
