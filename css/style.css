@@ -1,8 +1,22 @@
 * {
     font-family: Arial, sans-serif;
+    box-sizing: border-box;
   }
   
   table,th,td {
     border: solid black 1px;
     border-collapse: collapse;
   } 
+  header{
+    text-align: center;
+    background-color: whitesmoke;
+    
+  }
+  header h1{
+    height: 30px;
+  }
+  img{
+    display: block;
+    width: 30%;
+    margin: 5% auto;
+  }
