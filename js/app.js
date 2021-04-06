@@ -62,6 +62,7 @@ Location.prototype.gitrandomNumber = function () {
 Location.prototype.render = function () {
 
 
+
   let trelemnts = document.createElement('tr');
   tableelemnts.appendChild(trelemnts);
   let tdelemnts = document.createElement('td');
@@ -150,6 +151,9 @@ lastLast.textContent=totalone;
 
 
 
+
+
+
 // let Seattle = {
 
 //   goodname: 'Seattle',
@@ -193,6 +197,7 @@ lastLast.textContent=totalone;
 //       console.log(lielemnt.textContent);
 //       sum+=this.randomNumber1[j];
 //       }
+
 
 //     let lielemnt=document.createElement('li');
 //     lielemnt.textContent ='total '+ sum+' cookeis';
@@ -405,6 +410,7 @@ lastLast.textContent=totalone;
 //     unelemnt.appendChild(lielemnt);
 //    }
 //   };
+
 
 // Lima.gitCoustmer();
 // console.log(Lima.randomNumber1);
