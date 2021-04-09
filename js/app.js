@@ -10,7 +10,7 @@ let timeOfcookie = ['6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am'
 let parent = document.getElementById('parent');
 let tableelemnts = document.createElement('table');
 parent.appendChild(tableelemnts);
-// tableelemnts.setAttribute('id', 'table-1');
+tableelemnts.setAttribute('id', 'table-1');
 
 
 
@@ -36,7 +36,6 @@ showTable();
 let locations = [];
 console.log(locations);
 
-
 function Location(goodname, aavarage, minimum, maximum) {
 
   this.goodname = goodname;
@@ -47,13 +46,11 @@ function Location(goodname, aavarage, minimum, maximum) {
   this.gitrandomNumber();
   // this.total=0;
   locations.push(this);
-  
 
 
 }
 Location.prototype.gitrandomNumber = function () {
-  // this.total=0;
-  
+
   for (let s = 0; s < timeOfcookie.length; s++) {
     this.randomNumber1.push(Math.floor((randomNumber(this.maximum, this.minimum) * this.aavarage)));
   }
@@ -77,16 +74,13 @@ Location.prototype.render = function () {
 
   let sum = 0;
 
-  console.log('tota2 ',total);
+
   for (let i = 0; i < timeOfcookie.length; i++) {
     let tdelemnts = document.createElement('td');
     trelemnts.appendChild(tdelemnts);
     tdelemnts.textContent = this.randomNumber1[i];
     sum += this.randomNumber1[i];
-
   }
- 
-  console.log('tota3 ',total);
   // sumone+=sum; 
 
 
@@ -105,6 +99,9 @@ let Tokyo = new Location('Tokyo', 1.2, 3, 24);
 let Dubai = new Location('Dubai', 3.7, 11, 38);
 let paris = new Location('paris', 2.3, 20, 38);
 let lima = new Location('lima', 4.6, 2, 16);
+for (let l = 0; l < locations.length; l++) {
+  locations[l].render();
+}
 
 
 
@@ -116,50 +113,37 @@ cookieLocation.addEventListener('submit', submitter);
 
 function submitter(event) {
   event.preventDefault();
-  
-  
+
+
   let name = event.target.nameOfLocations.value;
   console.log(name);
   let avarage = event.target.avaregeCookei.value;
   console.log('avs', avarage);
-  
+
   let minimum = event.target.minmumCustumer.value;
   let maximum = event.target.maximumCustmer.value;
-  
-  let newLocation = new Location (name, avarage, minimum, maximum);
-  console.log('new location', locations);
+
+  let newLocation = new Location(name, avarage, minimum, maximum);
   // amro.tex tContent = '';
-  // let amro = document.getElementById('locationsForm');
-  tableelemnts.textContent='';
-  // tdelemnts=document.createElement('th');
-  // tableelemnts.appendChild(tdelemnts);
-  console.log('total',total);
-  showTable();
-  for (let l = 0; l < locations.length; l++) {
-    // total=0;
-    // totalone=0;
-    locations[l].render();
-    // totalone=0;
-    // total=0;
-  }
-  footer();
+  let amro = document.getElementById('locationsForm');
   
+    // tdelemnts=document.createElement('th');
+    // tableelemnts.appendChild(tdelemnts);
+
+    // // amro.removeChild(amro.lastChild);
+    // amro.deleteRow(tdelemnts);
+
   
-  
-  // // amro.removeChild(amro.lastChild);
-  // amro.deleteRow(tdelemnts);
-  
-  
-  // newLocation.gitrandomNumber();
-  // newLocation.render();
-  
-  
-  
+  newLocation.gitrandomNumber();
+  newLocation.render();
+
+
+
   // console.log('asdfasdsf');
-  // footer();
-  
-  
-  
+  footer();
+
+
+
   // newLocation.render(); 
 }
 // newLocation.render();
@@ -171,21 +155,20 @@ function submitter(event) {
 let total = 0;
 let totalone = 0;
 function footer() {
-  total=0;
-  totalone=0;
+
   let trelemnts = document.createElement('tr');
   tableelemnts.appendChild(trelemnts);
   let thelemnts = document.createElement('th');
   trelemnts.appendChild(thelemnts);
   thelemnts.textContent = 'Totals';
-  
+
   for (let f = 0; f < timeOfcookie.length; f++) {
- 
+
     for (let m = 0; m < locations.length; m++) {
       total += locations[m].randomNumber1[f];
       totalone += locations[m].randomNumber1[f];
     }
-    
+
     // console.log(total);
     let tdelemnts = document.createElement('th');
     trelemnts.appendChild(tdelemnts);
@@ -196,12 +179,6 @@ function footer() {
   let lastLast = document.createElement('th');
   trelemnts.appendChild(lastLast);
   lastLast.textContent = totalone;
-  totalone = 0;
-}
-
-
-for (let l = 0; l < locations.length; l++) {
-  locations[l].render();
 }
 footer();
 
@@ -210,5 +187,7 @@ footer();
 
 // console.log(sumone);
 // console.log(totalone);
+
+
 
 
