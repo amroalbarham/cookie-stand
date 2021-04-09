@@ -27,19 +27,21 @@
         <form action="" id="locationsForm">
             <fieldset>
                 <label for="nameOfLocations">Name of Location:</label>
-                <input type="text" id="nameOfLocations" name="nameOfLocations">
+                <input type="text" id="nameOfLocations" name="nameOfLocations" placeholder="please put location name"
+                    required>
+
                 <br>
                 <br>
                 <label for="avaregeCookei">Avarege Cookei:</label>
-                <input type="float" id="avaregeCookei" name="avaregeCookei">
+                <input type="number" id="avaregeCookei" name="avaregeCookei" step="0.1" required>
                 <br>
                 <br>
                 <label for="minmumCustumer">Minmum Custumer:</label>
-                <input type="number" id="minmumCustumer" name="minmumCustumer">
+                <input type="number" id="minmumCustumer" name="minmumCustumer" step="1" required>
                 <br>
                 <br>
                 <label for="maximumCustmer">Maximum Custmer</label>
-                <input type="number" id="maximumCustmer" name="maximumCustmer">
+                <input type="number" id="maximumCustmer" name="maximumCustmer" step="1" required>
                 <br>
                 <br>
                 <input type="submit">
